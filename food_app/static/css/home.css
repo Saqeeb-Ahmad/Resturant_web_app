@@ -1,0 +1,54 @@
+.text {
+  color: #212529;
+}
+
+.FoodieWe {
+  color: green;
+}
+
+.hurricane-regular {
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+.image {
+  height: 495px;
+  width: 640px;
+  float: right;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space;
+
+}
+
+
+.box-1 {
+
+  /* background-color: red;
+  border: 2px solid black; */
+  height: 450px;
+  width: 600px;
+  /* padding: 20px; */
+  margin-left: auto
+}
+
+.box-2 {
+  /* background-color: rgb(136, 0, 255);
+  border: 2px solid black; */
+  height: 450px;
+  width: 600px;
+  /* padding: 20px;
+  margin-left: 200px; */
+  margin-left: auto
+}
+
+.text {
+  text-align: center;
+  margin-top: 200px;
+}

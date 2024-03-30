@@ -1,0 +1,70 @@
+{% extends "food_app/base.html" %}
+{% load static %}
+{% block start %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<div class="header-1">
+    <h1 class="text-1">FoodieWe</h1>
+</div>
+
+<div class="border-box-1">
+    {% for n in items %}
+    <img class="circle-1" src="{{n.allimage.url}}">
+    {% endfor %}
+      {% comment %} <img class="circle-1" src="{% static 'css/m1.jpg' %}">
+  <img class="circle-1" src="{% static 'css/m2.jpg' %}">
+  <img class="circle-1" src="{% static 'css/m3.jpg' %}">
+  <img class="circle-1" src="{% static 'css/m4.jpg' %}">
+  <img class="circle-1" src="{% static 'css/m5.jpg' %}">
+  <img class="circle-1" src="{% static 'css/m1.jpg' %}"> {% endcomment %}
+</div>
+
+<div class="border-box-2">
+    <div class="border-box-3">
+        <h1 class="text-color">Our Story</h1>
+        {% for i in ourstory %}
+        <p class="text-size">{{i.ourstory_desc}}</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="border-box-4">
+    <div class="border-box-5">
+        <h1 class="text-color">Our Mantra</h1>
+    </div>
+    {% for each in items %}
+    <div class="rectangle-box-1">
+        <div class="content-box">
+            <h1 class="h1-1">{{each.title}}</h1>
+            <p class="font-size">{{each.title_desc}}</p>
+        </div>
+    </div>
+
+
+
+
+  {% comment %} <div class="rectangle-box-2">
+    <div><h1 class="h1-1">DO WHAT'S RIGHT </h1><p class="font-size">Our ambitions are big, yet no job is too small. Our crew is known for their smarts, their work ethic, and their straight-up scrappiness</p></div>
+  </div>
+
+  <div class="rectangle-box-3">
+    <div><h1 class="h1-1">DO WHAT'S RIGHT </h1><p class="font-size">Simple is always in style. (And for the sake of simplicity, we`ll leave it at that.)</p></div>
+  </div>
+
+  <div class="rectangle-box-4">
+    <div><h1 class="h1-1">DO WHAT'S RIGHT </h1><p class="font-size">In an industry filled with drama, egos, and pretense, we`ll be serving none of that.</p></div>
+  </div>
+
+  <div class="rectangle-box-5">
+    <div><h1 class="h1-1">DO WHAT'S RIGHT </h1><p class="font-size">Everyone at Back of the House should think big picture, solve the small daily puzzles, and always be thinking one step ahead.</p></div>
+  </div>
+
+  <div class="rectangle-box-6">
+    <div><h1 class="h1-1">DO WHAT'S RIGHT </h1><p class="font-size">An unpretentious approach to creating great guest experiences</p></div> {% endcomment %}
+
+
+
+    {% endfor %}
+</div>
+
+{% endblock %}

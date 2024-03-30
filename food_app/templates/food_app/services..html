@@ -1,0 +1,154 @@
+{% extends "food_app/base.html" %}
+{% load static %}
+{% block start %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}">
+<div class="container-box">
+    {%for i in all_items%}
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{{i.allimage.url}}"></div>
+        <h1 class="heading">{{i.title}}</h1>
+        {% for desc in description %}
+        {% if desc %}
+        <p class="text">{{desc.title_desc}}</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    
+
+
+    {% comment %} <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f2.jpg' %}"></div>
+        <h1 class="heading">Chinese Cuisinee</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f3.jpg' %}"></div>
+        <h1 class="heading">Japanese Food</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f4.jpg' %}"></div>
+        <h1 class="heading">Italian Food</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f5.jpg' %}"></div>
+        <h1 class="heading">Greek Food</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f6.jpg' %}"></div>
+        <h1 class="heading">Spanish Food</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f7.jpg' %}"></div>
+        <h1 class="heading">Mediterranean Food</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f8.jpg' %}"></div>
+        <h1 class="heading">French Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f9.jpg' %}"></div>
+        <h1 class="heading">Lebanese Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f10.jpg' %}"></div>
+        <h1 class="heading">Moroccan Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f11.jpg' %}"></div>
+        <h1 class="heading">Turkish Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f12.jpg' %}"></div>
+        <h1 class="heading">Thai Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f13.jpg' %}"></div>
+        <h1 class="heading">Indian Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f14.jpg' %}"></div>
+        <h1 class="heading">Cajun Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f15.jpg' %}"></div>
+        <h1 class="heading">Mexican Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f16.jpg' %}"></div>
+        <h1 class="heading">French Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f17.jpg' %}"></div>
+        <h1 class="heading">Hungarian Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f18.jpg' %}"></div>
+        <h1 class="heading">American Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f19.jpg' %}"></div>
+        <h1 class="heading">Russian Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div>
+
+    <div class="outer-box-1">
+        <div class="inner-box-1"><img src="{% static 'css/f13.jpg' %}"></div>
+        <h1 class="heading">German Cuisine</h1>
+        <p class="text"> Many regard French cuisine as one of the best cuisines in the world. French food involves
+            ingredients such as butter, cream, wine, herbs, chocolate, and vegetables.</p>
+    </div> {% endcomment %}
+    {% endfor %}
+</div>
+{% endblock %}

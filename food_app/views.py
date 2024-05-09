@@ -59,7 +59,7 @@ def register_page(request):
             if form.is_valid():
                 form.save()
                 messages.success(request,'Account successfully created')
-                return redirect('/login/')
+                return redirect(reverse('login/'))
         context = {'form':form }
         
         return render(request, 'food_app/register.html', context)
